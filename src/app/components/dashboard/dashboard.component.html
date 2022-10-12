@@ -1,4 +1,4 @@
-<div class="container-drinks">
+<!-- <div class="container-drinks">
     <ng-container *ngFor="let drink of drinks">
         <div class="container-drink" (click)="getRandomCocktail(drink.name)">
             <div class="img">
@@ -7,4 +7,15 @@
             {{ drink.name }}
         </div>
     </ng-container>
-</div>
+</div> -->
+
+<div class="container-drinks" *ngIf="drink$ | async as drinks">
+     <ng-container *ngFor="let drink of drinks">
+        <div class="container-drink" (click)="getRandomCocktail(drink.name)">
+            <div class="img">
+                <img [src]="drink.img" alt="">
+            </div><br>
+            {{ drink.name }}
+        </div>
+    </ng-container> 
+</div> 

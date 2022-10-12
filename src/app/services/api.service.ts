@@ -20,7 +20,19 @@ export class ApiService {
   getDrinks(){
     return this.http.post('http://ec2-18-116-97-69.us-east-2.compute.amazonaws.com:4001/mirror/drink',{
       endpoint: "json/v1/1/list.php?i=list"
-    });
+    }).pipe(
+      map((resp:any)=>{
+        let drinks: any[] = [];
+        resp.drinks.forEach((drink:any) => {
+          
+          drinks.push({
+            name: drink.strIngredient1,
+            img: 'https://www.thecocktaildb.com/images/ingredients/'+drink.strIngredient1+'.png'
+          })
+        });
+        return drinks
+      })
+    );
   }
 
   getRandomCocktail(name: string){
