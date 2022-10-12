@@ -1,0 +1,47 @@
+
+div{
+    text-align: center;
+    margin: 100px;
+    padding: 15px;
+    background-color: black;
+    border: 1px solid aqua;
+    border-radius: 5px;
+    color: white !important;
+    font-size: 25px;
+    box-shadow: 0 0 3px white;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid aqua;
+    margin: 15px 0;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    &:focus {
+        box-shadow: 0 3px 3px  -3px aqua;
+    }
+    &:hover{
+        box-shadow: 0 3px 3px  -3px aqua
+    }
+}
+
+button{
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid aqua;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: aqua;
+    color: black;
+    box-shadow: 0 0 3px aqua;
+    transition: 0.3s;
+
+}
+

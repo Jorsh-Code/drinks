@@ -1,0 +1,11 @@
+.container{
+   background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: calc(100vh - 64px);
+    overflow: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 15px ;
+    box-sizing: border-box;
+}
